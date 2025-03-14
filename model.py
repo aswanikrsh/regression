@@ -65,3 +65,7 @@ with open("model.pkl", "wb") as f:
 # Save scaler
 with open("scaler.pkl", "wb") as f:
     pickle.dump(scaler, f)
+
+from joblib import dump
+
+dump(data, "compressed.pkl", compress=3)  # Adjust `compress` level (1-9)
